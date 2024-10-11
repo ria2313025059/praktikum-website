@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengecekan Kelulusan Siswa</title>
+    <script>
+        // Daftar siswa dengan nilai masing-masing
+        const siswa = [
+            { nama: "Andi", nilai: { matematika: 70, biologi: 80, fisika: 70, kimia: 90 } },
+            { nama: "Ria", nilai: { matematika: 90, biologi: 65, fisika: 80, kimia: 70 } },
+            { nama: "Bima", nilai: { matematika: 100, biologi: 70, fisika: 95, kimia: 50 } },
+            { nama: "Toni", nilai: { matematika: 60, biologi: 60, fisika: 70, kimia: 60 } },
+            { nama: "Putri", nilai: { matematika: 70, biologi: 100, fisika: 80, kimia: 75 } }
+        ];
+
+        // Standar kelulusan
+        const standarKelulusan = 60;
+
+        // Fungsi untuk mengecek kelulusan
+        function cekKelulusan() {
+            let semuaLulus = true;
+            let semuaTidakLulus = true;
+
+            siswa.forEach(s => {
+                const { matematika, biologi, fisika, kimia } = s.nilai;
+
+                // Cek apakah siswa lulus di semua mata pelajaran
+                if (matematika >= standarKelulusan && biologi >= standarKelulusan && fisika >= standarKelulusan && kimia >= standarKelulusan) {
+                    console.log(s.nama + " lulus.");
+                    semuaTidakLulus = false; // Jika ada yang lulus, maka tidak semua tidak lulus
+                } else {
+                    console.log(s.nama + " tidak lulus.");
+                    semuaLulus = false; // Jika ada yang tidak lulus, maka tidak semua lulus
+                }
+            });
+
+            // Tampilkan hasil jika semua lulus atau semua tidak lulus
+            if (semuaLulus) {
+                console.log("Semua Lulus");
+            } else if (semuaTidakLulus) {
+                console.log("Semua Tidak Lulus");
+            }
+        }
+
+        // Pengecekan otomatis saat halaman dimuat
+        window.onload = function() {
+            cekKelulusan();
+        };
+    </script>
+</head>
+<body>
+    <h1>Pengecekan Kelulusan Siswa</h1>
+    <p>Buka Console untuk melihat hasilnya.</p>
+</body>
+</html>
