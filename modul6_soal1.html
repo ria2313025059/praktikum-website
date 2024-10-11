@@ -1,17 +1,31 @@
-// Daftar pelanggan yang memiliki membership
-const members = ["Lena"];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengecekan Membership Restoran</title>
+    <script>
+        // Daftar pelanggan yang memiliki membership
+        var members = ["Lena"];
 
-// Kasus: Lena dan Rio
-const pelanggan = ["Lena", "Rio"];
+        // Fungsi pengecekan membership
+        function cekDiskon(nama) {
+            if (members.includes(nama)) {
+                console.log(nama + " mendapatkan diskon 5%");
+            } else {
+                console.log(nama + " tidak mendapatkan diskon");
+            }
+        }
 
-// Fungsi untuk pengecekan diskon
-function cekDiskon(nama) {
-    if (members.includes(nama)) {
-        console.log(nama + " mendapatkan diskon 5%");
-    } else {
-        console.log(nama + " tidak mendapatkan diskon");
-    }
-}
-
-// Memeriksa masing-masing pelanggan
-pelanggan.forEach(nama => cekDiskon(nama));
+        // Pengecekan untuk Lena dan Rio
+        window.onload = function() {
+            cekDiskon("Lena"); // Lena memiliki membership
+            cekDiskon("Rio");  // Rio tidak memiliki membership
+        };
+    </script>
+</head>
+<body>
+    <h1>Pengecekan Membership Restoran</h1>
+    <p>Buka Console untuk melihat hasilnya.</p>
+</body>
+</html>
