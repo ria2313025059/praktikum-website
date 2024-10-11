@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengecekan Membership Restoran</title>
+    <script>
+        function cekDiskon(nama) {
+            // Daftar pelanggan yang memiliki membership
+            var members = ["Lena"];
+
+            // Cek apakah nama yang diinput ada dalam daftar membership
+            if (members.includes(nama)) {
+                document.getElementById("hasil").innerHTML = nama + " mendapatkan diskon 5%";
+            } else {
+                document.getElementById("hasil").innerHTML = nama + " tidak mendapatkan diskon";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Pengecekan Membership Restoran</h1>
+
+    <p>Masukkan nama pelanggan:</p>
+    <input type="text" id="namaPelanggan">
+    <button onclick="cekDiskon(document.getElementById('namaPelanggan').value)">Cek Diskon</button>
+
+    <p id="hasil"></p>
+</body>
+</html>
