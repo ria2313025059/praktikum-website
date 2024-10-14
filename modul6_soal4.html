@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Perhitungan Total Pembelian</title>
+</head>
+<body>
+    <script>
+        const hargaBarang = parseFloat(prompt("Masukkan harga barang:")); 
+        const jumlahBarang = parseInt(prompt("Masukkan jumlah barang yang dibeli:")); 
+        const totalHarga = hargaBarang * jumlahBarang;
+
+        let diskon = 0;
+        if (jumlahBarang > 50) {
+            diskon = totalHarga * 0.10; 
+        }
+        const hargaSetelahDiskon = totalHarga - diskon;
+        let pesan = "Harga Keseluruhan Tanpa Diskon: Rp " + totalHarga.toFixed(2) + "\n" +
+                    "Diskon yang Diberikan: Rp " + diskon.toFixed(2) + "\n" +
+                    "Harga Setelah Diskon: Rp " + hargaSetelahDiskon.toFixed(2);
+        alert(pesan);
+    </script>
+</body>
+</html>
