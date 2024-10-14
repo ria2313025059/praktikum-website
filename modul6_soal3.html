@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Penghitungan Kunjungan Salon</title>
+</head>
+<body>
+    <script>
+        const totalKunjungan = parseInt(prompt("Masukkan total kunjungan ke salon:"));
+        const kupon = totalKunjungan; 
+        const bonusGratis = Math.floor(kupon / 10); 
+        let pesan = "Total Kunjungan: " + totalKunjungan + "\n" +
+                    "Banyak Potongan Kupon: " + kupon + "\n";
+  
+        if (bonusGratis > 0) {
+            pesan += "Selamat! Anda mendapatkan " + bonusGratis + " kunjungan gratis.";
+        } else {
+            pesan += "Anda belum mendapatkan kunjungan gratis.";
+        }
+        alert(pesan);
+    </script>
+</body>
+</html>
