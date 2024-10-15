@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: purple;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #purple;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
