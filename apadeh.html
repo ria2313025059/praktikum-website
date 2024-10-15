@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: purple;
+            color: white;
+        }
+        header {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: pink;
+            color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: purple;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: purple;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+        header.dark-mode {
+            background-color: black;
+        }
+        section.dark-mode {
+            background-color: grey;
+            color: white;
+        }
+        footer.dark-mode {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://vclass.unila.ac.id/pluginfile.php/1521411/user/icon/mb2nl/f1?rev=17788714"="Foto Anda">
+        <h1>Ria Yurliza Sapitri</h1>
+        <p>Nama saya Ria Yurliza Sapitri,saya kelahiran tahun 2004,sekarang saya sedang menduduki bangku kuliah di UNIVERSITAS LAMPUNG Program Studi Pendidikan Teknologi Informasi,dan saya lahir di Kotaagung Tanggamus alumni SMK Muhammadiyah Kotaagung .</p>
+        <!-- Tombol untuk mengganti tema -->
+        <button onclick="toggleTheme()">Ganti Tema</button>
+    </header>
+
+    <section>
+        <h2>Kontak</h2>
+        <ul>
+            <li>Email: <a href="mailto:cantikyaya718@gmail.com">cantikyaya718@gmail.com</a></li>
+            <li>No. WA: <a href="https://wa.me/0895601630304">+62 895601630304</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/ria.yrlza?igsh=cDE5dmV5Z3lpanN6">instagram.com</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Skill IT</h2>
+        <ul>
+            <li>Pengembangan WEB (HTML, CSS, JavaScript)</li>
+            <li>Manajement Basis Data (MySQL)</li>
+            <li>Kontrol Versi (W3school, GitHub, Notepad, VSCode)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Kemampuan Bahasa</h2>
+        <ul>
+            <li>Bahasa Indonesia</li>
+            <li>English</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Pengalaman Kerja</h2>
+        <ul>
+            <li>Konter Handphone (2022 - 2023)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Pengalaman Organisasi</h2>
+        <ul>
+            <li>Anggota HIMASAKTA (2023)</li>
+            <li>Anggota PIK-R UNILA (2023 - Sekarang)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Riwayat Pendidikan</h2>
+        <ul>
+            <li>SD N 1 KAGUNGAN (2010 - 2016)</li>
+            <li>SMP N 1 KOTAAGUNG TIMUR (2016 - 2019)</li>
+            <li>SMK MUHAMMADIYAH KOTAAGUNG (2019 - 2022)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Sertifikasi</h2>
+        <ul>
+            <li>Tidak Ada</li>
+        </ul>
+    </section>
+
+    <footer>
+        &copy; 2024 Ria Yurliza Sapitri. All rights reserved.
+        <p id="time"></p> <!-- Waktu akan ditampilkan di sini -->
+    </footer>
+
+    <script>
+        // Fungsi untuk mengganti tema dark/light
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            document.querySelector("header").classList.toggle("dark-mode");
+            document.querySelectorAll("section").forEach(function(section) {
+                section.classList.toggle("dark-mode");
+            });
+            document.querySelector("footer").classList.toggle("dark-mode");
+        }
+
+        // Fungsi untuk menampilkan waktu saat ini di footer
+        function showTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById("time").innerHTML = "Waktu saat ini: " + timeString;
+        }
+
+        // Memanggil fungsi showTime setiap detik
+        setInterval(showTime, 1000);
+    </script>
+
+</body>
+</html>
