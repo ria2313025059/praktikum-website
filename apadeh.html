@@ -131,7 +131,7 @@
     <section>
         <h2>Sertifikasi</h2>
         <ul>
-            <li>Tidak Ada</li>
+            <li>Belum memiliki sertifikasi</li>
         </ul>
     </section>
 
@@ -141,7 +141,6 @@
     </footer>
 
     <script>
-        // Fungsi untuk mengganti tema dark/light
         function toggleTheme() {
             document.body.classList.toggle("dark-mode");
             document.querySelector("header").classList.toggle("dark-mode");
@@ -150,15 +149,11 @@
             });
             document.querySelector("footer").classList.toggle("dark-mode");
         }
-
-        // Fungsi untuk menampilkan waktu saat ini di footer
         function showTime() {
             const now = new Date();
             const timeString = now.toLocaleTimeString();
             document.getElementById("time").innerHTML = "Waktu saat ini: " + timeString;
         }
-
-        // Memanggil fungsi showTime setiap detik
         setInterval(showTime, 1000);
     </script>
 
